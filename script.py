@@ -18,7 +18,7 @@ while(True):
     # Look for faces in the image using the loaded cascade file
     faces = faceCascade.detectMultiScale(gray, 1.2, 5)
     for (x,y,w,h) in faces:
-            # Create rectangle around faces 
+            # Create rectangle around faces
         cv2.rectangle(image,(x,y),(x+w,y+h),(255,255,0),2)
 
     # Create the resizeable window

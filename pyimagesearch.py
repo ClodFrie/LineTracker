@@ -26,12 +26,7 @@ while True:
 	# grab the frame from the threaded video stream and resize it
 	# to have a maximum width of 400 pixels
 	frame = vs.read()
-	frame = imutils.resize(frame, width=800)
-	# draw the timestamp on the frame
-	timestamp = datetime.datetime.now()
-	ts = timestamp.strftime("%A %d %B %Y %I:%M:%S%p")
-	cv2.putText(frame, ts, (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX,
-		0.35, (0, 0, 255), 1)
+	frame = imutils.resize(frame, width=400)
 
 	# Convert into grayscale
 	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
