@@ -37,11 +37,11 @@ while True:
 	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 	# # Look for faces in the image using the loaded cascade file
 	faces = faceCascade.detectMultiScale(gray, 1.2, 5)
-    # for (x,y,w,h) in faces:
-    #     # Create rectangle around faces
-    #     cv2.rectangle(frame,(x,y),(x+w,y+h),(255,255,0),2)
+	for (x,y,w,h) in faces:
+		# Create rectangle around faces
+		cv2.rectangle(frame,(x,y),(x+w,y+h),(255,255,0),2)
 
-	# # show the frame
+	# show the frame
 	cv2.imshow("Frame", frame)
 	key = cv2.waitKey(1) & 0xFF
 	# if the `q` key was pressed, break from the loop
